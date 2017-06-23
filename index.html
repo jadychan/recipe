@@ -1,0 +1,32 @@
+<!DOCTYPE>
+
+<html>
+    <head>
+        <title>Food Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="style.css" >
+          
+    </head>
+    <body>
+        <div class="container">
+        
+        <h1 id = "title">Recipes!</h1>
+      
+       
+        <p id = "here">Search here: <input id = "search" /></p>
+        <a id = "local" onclick={getDataFromApi()} class="pink-text waves-effect waves-light btn-small"><i class="material-icons right">local_dining</i>Click me</a>
+        </div>
+    <div class="row">
+        <div id = "result"></div>
+        <script src="script.js"></script>
+    </div>
+    
+    </body>
+</html>
