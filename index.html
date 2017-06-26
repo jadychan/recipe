@@ -2,31 +2,62 @@
 
 <html>
     <head>
-        <title>Food Project</title>
-        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="style.css" >
-          
-    </head>
-    <body>
-        <div class="container">
+        <title>Recipes</title>
+          <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+          <!-- Compiled and minified CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
         
-        <h1 id = "title">Recipes!</h1>
-      
-       
-        <p id = "here">Search here: <input id = "search" /></p>
-        <a id = "local" onclick={getDataFromApi()} class="pink-text waves-effect waves-light btn-small"><i class="material-icons right">local_dining</i>Click me</a>
-        </div>
-    <div class="row">
-        <div id = "result"></div>
-        <script src="script.js"></script>
-    </div>
+          <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="style.css" >
+    </head>
     
+    <body>
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Recipes</h1>
+            <div class="row center">
+              <h5 class="header col s12 white-text">Search below for some of your favorite meals.</h5>
+            </div>
+              <div class="row center">
+                <nav>
+                  <div class="indigo lighten-3 nav-wrapper col-s6">
+                    <form onsubmit="{getDataFromApi()};return false">
+                      <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" id="search"><i class="material-icons">local_cafe</i></label>
+                        <i class="material-icons" type="button" onclick="ClearFields();">close</i>
+                      </div>
+                    </form>
+                  </div>
+                </nav>
+              </div>
+            <br><br>
+          </div>
+        </div>
+      </div>
+              
+      <div class="container">
+        <div class="section">
+    
+          <div class="row">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4><i class="material-icons">touch_app</i> Cooking Better, Together</h4>
+              <p class="left-align light">Click on the picture to view the ingredients of your desired food. If you want to learn more about the recipe, click 'See More.' We have curated multiple recipes for you to select from. These recipes have been collected from all of the world to give you the most authentic and delicious meals. Hope you enjoy all of the recipes!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="row">
+          <div id = "result"></div>
+          <script src="script.js"></script>
+      </div>
+        
     </body>
 </html>

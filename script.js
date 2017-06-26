@@ -20,22 +20,26 @@ function getDataFromApi(){
         var finalHTML = ''
         
         json.hits.forEach(function(item){
-            finalHTML += `      
-                
-                    <div class="col s3 m3">
-                      <div class="card large">
-                        <div class="card-image">
-                          <img src="${item.recipe.image}"/>
-                          <span class="card-title">${item.recipe.label}</span>
-                        </div>
-                        <div class="card-content">
-                          <p>${item.recipe.ingredientLines}</p>
-                        </div>
-                        <div class="card-action">
-                          <a href="#">This is a link</a>
-                        </div>
-                      </div>
-                    </div>`
+            finalHTML +=   `
+            <div class="col s3 m3">    
+              <div class="teal lighten-3 card medium">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="${item.recipe.image}">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator white-text text-darken-4">${item.recipe.label}<i class="material-icons right">more_vert</i></span>
+                  
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">${item.recipe.label}<i class="material-icons right">close</i></span>
+                  <p>${item.recipe.ingredientLines}</p>
+                </div>
+   
+                <div class="card-action">
+                  <a class = "white-text" href="${item.recipe.url}" target = "_blank">See More</a>
+                </div>
+              </div>
+            </div>`
 
         })
         
@@ -49,3 +53,8 @@ function getDataFromApi(){
     })
 }
 
+function ClearFields() {
+     document.getElementById("search").value = "";
+}
+
+var velocity = 0.5;

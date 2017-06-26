@@ -1,11 +1,23 @@
-#title {
+.container h1 {
     font-family: 'Shrikhand', cursive;
 }
 
-#here {
+.container h5 {
     font-family: 'Shrikhand', cursive;
 }
 
-#local {
-    font-family: 'Shrikhand', cursive;
+.parallax-container { 
+    /* The image used */
+    background-image: url("http://hbu.h-cdn.co/assets/16/23/1600x800/landscape-1465239399-industrial-kitchen.jpg");
+
+    /* Set a specific height */
+    height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
