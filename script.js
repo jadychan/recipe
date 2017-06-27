@@ -1,5 +1,21 @@
 function getDataFromApi(){
+  
+    var spinnerDiv = document.getElementById("spinner")
+    spinnerDiv.innerHTML =  
+     `  
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+      `
+      
     var endpoint ='https://api.edamam.com/search?'
+
     
     var inputElement = document.getElementById('search')
     var value = inputElement.value
@@ -45,6 +61,9 @@ function getDataFromApi(){
         
         var resultDiv = document.getElementById('result')
         resultDiv.innerHTML = finalHTML
+        
+        var spinnerDiv = document.getElementbyID('spinner')
+        spinnerDiv.innerHTML = ''
 
     })
     
