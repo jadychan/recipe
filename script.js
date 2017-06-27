@@ -62,7 +62,7 @@ function getDataFromApi(){
         var resultDiv = document.getElementById('result')
         resultDiv.innerHTML = finalHTML
         
-        var spinnerDiv = document.getElementbyID('spinner')
+        var spinnerDiv = document.getElementById('spinner')
         spinnerDiv.innerHTML = ''
 
     })
